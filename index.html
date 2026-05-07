@@ -12,30 +12,37 @@
   </head>
   <body>
     <div class="app">
-      <!-- NAVBAR -->
       <nav class="navbar">
         <div class="logo">
-          <span class="logo-icon">📺</span>
+          <span class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="20" height="14" rx="2"/>
+              <path d="M8 2l4 4 4-4"/>
+            </svg>
+          </span>
           <span class="logo-text">Stream<strong>TV</strong></span>
         </div>
 
         <form class="search-form" id="search-form" autocomplete="off">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.3-4.3"/>
+            </svg>
+          </span>
           <input
             type="text"
             id="search-input"
             class="search-input"
-            placeholder="Buscar series... (ej: Breaking Bad, Westworld)"
+            placeholder="Buscar series (ej: Breaking Bad, Westworld)"
             required
           />
           <button type="submit" class="search-btn">Buscar</button>
         </form>
       </nav>
 
-      <!-- RESULTADOS DE BÚSQUEDA -->
       <section class="search-results" id="search-results" hidden></section>
 
-      <!-- CONTENIDO PRINCIPAL -->
       <main class="content">
         <div class="loader" id="loader" hidden>
           <div class="spinner"></div>
