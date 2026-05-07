@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreamTV · Buscador de Series</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <div class="logo">
+          <span class="logo-icon">📺</span>
+          <span class="logo-text">Stream<strong>TV</strong></span>
+        </div>
+
+        <form class="search-form" id="search-form" autocomplete="off">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Buscar series... (ej: Breaking Bad, Westworld)"
+            required
+          />
+          <button type="submit" class="search-btn">Buscar</button>
+        </form>
+      </nav>
+
+      <!-- RESULTADOS DE BÚSQUEDA -->
+      <section class="search-results" id="search-results" hidden></section>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <main class="content">
+        <div class="loader" id="loader" hidden>
+          <div class="spinner"></div>
+          <p>Cargando datos de la serie...</p>
+        </div>
+
+        <header id="show-header"></header>
+
+        <section class="seasons-wrapper" id="seasons-wrapper">
+          <h2 class="section-title" id="section-title" hidden>Episodios por temporada</h2>
+          <article class="episodes" id="episodes"></article>
+          <div class="legend" id="legend" hidden>
+            <span class="legend-title">Rating:</span>
+            <div class="legend-item"><span class="dot rating-2"></span> Bajo</div>
+            <div class="legend-item"><span class="dot rating-5"></span> Regular</div>
+            <div class="legend-item"><span class="dot rating-7"></span> Bueno</div>
+            <div class="legend-item"><span class="dot rating-9"></span> Excelente</div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Datos de <a href="https://www.tvmaze.com/api" target="_blank" rel="noopener">TVMaze API</a></p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
